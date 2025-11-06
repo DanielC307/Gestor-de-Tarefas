@@ -26,4 +26,3 @@ Um aplicativo simples de **linha de comando em Python** para organizar suas tare
 1. Clone o repositório:
    ```bash
    git clone https://github.com/seu-usuario/gestor_tarefas_seu_ze.git
-   cd gestor_tarefas_seu_ze
