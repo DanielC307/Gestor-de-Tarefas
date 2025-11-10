@@ -20,9 +20,7 @@ print("\n4) Reabri Atividade")
 print("\n0) sair")
 
 while True:
-
-    
-        
+    try:     
         opcao = int(input("\nEscolha uma opção: "))
         
         if opcao == 1:
@@ -94,5 +92,9 @@ while True:
                 continue
     
         if opcao == 0:
-            print(lista)
-            break
+            break  
+
+    except ValueError:
+        
+        print("\nDIGITE APENAS OS NUMEROS DO MENU!!!")
+        
