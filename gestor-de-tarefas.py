@@ -92,9 +92,42 @@ while True:
                 continue
     
         if opcao == 0:
+            print("\n==============================")
+            print("RELATÓRIO FINAL")
+            print("==============================")
+
+
+            concluidas = []
+            pendentes = []
+
+            for tarefa in lista:
+                if tarefa['status'] == 'Concluido':
+                   concluidas.append(tarefa)
+                elif tarefa['status'] == 'A Fazer':
+                    pendentes.append(tarefa)
+
+            print("\nTarefas Concluídas:")
+            
+            if len(concluidas) == 0:
+                print("(nenhuma)")
+            else:
+              for tarefa in concluidas:
+                    print(f"- [{tarefa['id']}] {tarefa['descricao']} ({tarefa['data']})")
+
+            print("\nTarefas Pendentes:")
+          
+            if len(pendentes) == 0:
+              print("(nenhuma)")
+            else:
+              for tarefa in pendentes:
+                  print(f"- [{tarefa['id']}] {tarefa['descricao']} ({tarefa['data']})")
+
+            print("\n---------------------------------")
+            print(f"Total concluídas: {len(concluidas)}")
+            print(f"Total pendentes: {len(pendentes)}")
+            print("---------------------------------")
             break  
 
     except ValueError:
         
         print("\nDIGITE APENAS OS NUMEROS DO MENU!!!")
-        
