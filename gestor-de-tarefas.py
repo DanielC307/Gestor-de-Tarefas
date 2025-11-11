@@ -108,6 +108,7 @@ while True:
 
             print("\nTarefas Concluídas:")
             
+
             if len(concluidas) == 0:
                 print("(nenhuma)")
             else:
@@ -126,7 +127,7 @@ while True:
             print(f"Total concluídas: {len(concluidas)}")
             print(f"Total pendentes: {len(pendentes)}")
             print("---------------------------------")
-            break  
+            break   
 
     except ValueError:
         
